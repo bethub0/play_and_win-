@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Claim your 100% bonus on registration. Planbet, Melbet, Linebet, Winwin, Megapari - All trusted apps in one place.">
+  <meta name="keywords" content="Planbet, Melbet, Linebet, Megapari, Winwin, betting, bonus, 100% bonus, SL1205, registration bonus, play and win, betting apk download">
+  <meta name="author" content="Play and Win">
+  <title>Play and Win</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+    #intro, #bonus {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #intro h1 {
+      font-size: 3rem;
+      color: gold;
+      animation: fadeOut 1s ease-in-out 3s forwards;
+    }
+    #bonus {
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 4s forwards;
+    }
+    #bonus h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: gold;
+    }
+    #claim-btn {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background: gold;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #main-content {
+      display: none;
+      padding: 2rem;
+      animation: mainFadeIn 2s ease-in-out;
+    }
+    .app-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid gold;
+      border-radius: 20px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .app-card img {
+      width: 100px;
+    }
+    .buttons a {
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      background: gold;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    video {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; visibility: visible; }
+    }
+    @keyframes mainFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div id="intro">
+    <h1>Welcome to Play and Win</h1>
+  </div>
+
+  <div id="bonus">
+    <h2>Claim your 100% Bonus</h2>
+    <button id="claim-btn">Claim</button>
+  </div>
+
+  <div id="main-content">
+    <div class="app-card">
+      <img src="planbet.png" alt="Planbet Logo" />
+      <div class="buttons">
+        <a href="https://planbet.me/SL1205" target="_blank">Join Now</a>
+        <a href="https://planbet.me/SL1205-apk" target="_blank">Download</a>
+      </div>
+      <video onclick="this.requestFullscreen()" controls>
+        <source src="Planbet-Guide.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="app-card">
+      <img src="melbet.png" alt="Melbet Logo" />
+      <div class="buttons">
+        <a href="https://refpakrtsb.top/L?tag=d_2842719m_18757c_&site=2842719&ad=18757&r=registration" target="_blank">Join Now</a>
+      </div>
+      <video onclick="this.requestFullscreen()" controls>
+        <source src="Whatsapp Video 2025-06-26 At 15.41.35 Ee925e12.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <audio id="intro-sound" src="opera-gx.mp3" preload="auto"></audio>
+  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+  <script>
+    const claimBtn = document.getElementById("claim-btn");
+    const intro = document.getElementById("intro");
+    const bonus = document.getElementById("bonus");
+    const mainContent = document.getElementById("main-content");
+    const introSound = document.getElementById("intro-sound");
+    const clickSound = document.getElementById("click-sound");
+
+    window.onload = () => {
+      introSound.play();
+    }
+
+    claimBtn.onclick = () => {
+      clickSound.play();
+      intro.style.display = "none";
+      bonus.style.display = "none";
+      mainContent.style.display = "block";
+    }
+  </script>
+</body>
+</html>
